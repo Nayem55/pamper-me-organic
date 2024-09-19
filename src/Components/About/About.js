@@ -1,14 +1,17 @@
 import React from 'react';
 import img from '../../Images/product-image.jfif'
+import { Link } from 'react-router-dom';
 
 const About = () => {
     return (
-        <div className='w-[90%] sm:w-[80%] mx-auto flex flex-col sm:flex-row py-10 items-center'>
-            <div className='w-[50%]'>
+        <div className='w-[90%] sm:w-[80%] mx-auto flex flex-col-reverse gap-6 sm:flex-row py-10 items-center'>
+            <div className='sm:w-[50%]'>
                 <p className='text-3xl font-bold'>About Pamper Me Hair Oil</p>
-                <p className='mt-4 w-[80%] text-xl'>Pamper Me Organic Hair Oil is a luxurious blend of nature’s finest ingredients, designed to nourish and revitalize your hair from root to tip. Infused with organic oils and botanical extracts, this lightweight formula helps strengthen hair, reduce breakage, and promote healthy growth. Whether you're looking to soothe a dry scalp, add shine, or manage frizz, Pamper Me provides deep hydration without leaving a greasy residue. Ideal for all hair types, this oil is free from harsh chemicals, ensuring a pure and gentle treatment for your hair.</p>
+                <img src={img} alt='' className='my-4 sm:hidden'/>
+                <p className='mt-4 sm:w-[80%] mb-10'>Pamper Me Organic Hair Oil is a luxurious blend of nature’s finest ingredients, designed to nourish and revitalize your hair from root to tip. Infused with organic oils and botanical extracts, this lightweight formula helps strengthen hair, reduce breakage, and promote healthy growth. Whether you're looking to soothe a dry scalp, add shine, or manage frizz, Pamper Me provides deep hydration without leaving a greasy residue. Ideal for all hair types, this oil is free from harsh chemicals, ensuring a pure and gentle treatment for your hair.</p>
+                <Link className='px-6 py-2 bg-black text-white font-bold'> BUY NOW</Link>
             </div>
-            <div className='w-[50%]'>
+            <div className='sm:w-[50%] hidden sm:block'>
                 <img src={img} alt='' />
             </div>
         </div>
