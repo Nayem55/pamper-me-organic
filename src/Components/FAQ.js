@@ -8,6 +8,7 @@ const FAQ = () => {
         <h2 className="text-3xl font-bold text-left mb-6">
           Frequently Asked Questions
         </h2>
+        <img src={img} alt="FAQ illustration" className="rounded-lg sm:hidden my-4"/>
         <div className="mx-auto">
           <div className="mb-4">
             <h3 className="text-xl font-semibold">
@@ -57,7 +58,7 @@ const FAQ = () => {
       </div>
 
       <div className="sm:w-[50%]">
-        <img src={img} alt="FAQ illustration" className="rounded-lg"/>
+        <img src={img} alt="FAQ illustration" className="rounded-lg hidden sm:block"/>
       </div>
     </section>
   );

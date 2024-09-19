@@ -6,6 +6,7 @@ const Ingredients = () => {
     <section className="py-10 px-4 w-[90%] sm:w-[80%] mx-auto flex flex-col-reverse sm:flex-row gap-6 items-center">
       <div className="sm:w-[50%]">
         <h2 className="text-3xl font-bold text-left mb-6">Ingredients</h2>
+        <img className="my-4 sm:hidden" src={img} alt="" />
         <div className="text-left md:text-left">
           <p className="mb-4">
             Pamper Me Organic Hair Oil is made with a powerful blend of:
@@ -19,7 +20,7 @@ const Ingredients = () => {
         </div>
       </div>
       <div className="sm:w-[50%]">
-         <img src={img} alt="" />
+         <img className="hidden sm:block" src={img} alt="" />
       </div>
     </section>
   );

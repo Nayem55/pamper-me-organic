@@ -9,7 +9,7 @@ const Footer = () => {
           <img src={logo} alt="Pamper Me Organic Hair Oil" className="w-[160px] md:w-[200px] mb-4" />
         </div>
 
-        <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8 text-center md:text-left">
+        <div className="grid grid-cols-2 md:grid-cols-3  gap-10 md:space-y-0 md:space-x-8 text-left md:text-left">
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Product</h3>
             <ul className="space-y-2">
@@ -38,8 +38,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <p className="text-white">Biravo, Narayanganj, Dhaka.</p>
+        <div className="flex flex-col items-start md:items-start text-center md:text-left mt-10">
+          <p className="text-white">Rampura, Banasree, Dhaka.</p>
           <p className="text-white">contact@pampermeorganichair.com</p>
           <p className="text-white">+88 01404-403396</p>
         </div>
