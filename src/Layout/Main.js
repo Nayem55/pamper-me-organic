@@ -17,7 +17,7 @@ const Main = () => {
 
   return (
     <div className="bg-[#FAF9F6]">
-      <Header></Header>
+      {/* <Header></Header> */}
       <Outlet></Outlet>
       <Footer></Footer>
     </div>
