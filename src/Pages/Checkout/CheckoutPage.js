@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import "../Checkout/CheckoutPage.css"
+import "../Checkout/CheckoutPage.css";
 import { useNavigate } from "react-router-dom";
 import BillingDetails from "../../Components/ProductsCheckout/BillingDetails/BillingDetails";
 import OrderDetails from "../../Components/ProductsCheckout/OrderDetails/OrderDetails";
@@ -13,15 +13,23 @@ const CheckoutPage = () => {
   const [comment, setComment] = useState();
   const [locationSave, setLocationSave] = useState(false);
   const navigate = useNavigate();
+  const [price, setPrice] = useState(499);
+  const [quantity, setQuantity] = useState(1);
 
-  let price = 0;
-  // cart.map((item) => {
-  //   price = price + item.price * item.quantity;
-  // });
+
+  const increaseQuantity = () => {
+    setQuantity((prevQuantity) => prevQuantity + 1);
+    setPrice((quantity + 1) * 499);
+  };
+
+  const decreaseQuantity = () => {
+    if (quantity > 1) {
+      setQuantity((prevQuantity) => prevQuantity - 1);
+      setPrice((quantity - 1) * 499);
+    }
+  };
 
   let shippingCharge = city === "" ? 80 : city === "Dhaka" ? 80 : 150;
-  const vat = Math.floor((price * 5) / 100);
-  const totalPrice = price + vat + shippingCharge;
 
   const handleOrderSubmit = (e) => {
     e.preventDefault();
@@ -30,12 +38,12 @@ const CheckoutPage = () => {
     const { firstName, lastName, email, phone, address } =
       Object.fromEntries(form);
 
-    const OrderedProduct =  {
-        // _id,
-        // name,
-        // quantity,
-        // total: quantity * price,
-      };
+    const OrderedProduct = {
+      _id: "1234",
+      name:"Pamper me essential hair oil",
+      quantity:quantity,
+      total: price,
+    };
 
     const clientInfo = {
       firstName,
@@ -55,12 +63,10 @@ const CheckoutPage = () => {
       shippingAddress,
       coupon: "",
       subtotal: price,
-      totalPrice,
+      totalPrice: price + shippingCharge,
       PaymentMethod,
       paid: false,
       shippingCharge,
-
-      vat,
       comment,
     };
 
@@ -101,13 +107,13 @@ const CheckoutPage = () => {
             />
             <label htmlFor="cod">Cash on delivery</label>
             <br />
-            <input
+            {/* <input
               type="radio"
               id="onlineBanking"
               name="method"
               onClick={() => setPaymentMethod("Online Payment")}
             />
-            <label htmlFor="onlineBanking">Online Payment</label>
+            <label htmlFor="onlineBanking">Online Payment</label> */}
           </div>
           <div className="add-comment">
             <h5>Add Comments About Your Order</h5>
@@ -122,9 +128,13 @@ const CheckoutPage = () => {
           <OrderDetails
             city={city}
             price={price}
+            setPrice={setPrice}
+            quantity={quantity}
+            setQuantity={setQuantity}
             shippingCharge={shippingCharge}
-            vat={vat}
-            totalPrice={totalPrice}
+            totalPrice={price + shippingCharge}
+            increaseQuantity={increaseQuantity}
+            decreaseQuantity={decreaseQuantity}
           />
 
           <div className="order-confirmation">
