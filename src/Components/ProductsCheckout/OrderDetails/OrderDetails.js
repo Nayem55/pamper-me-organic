@@ -39,8 +39,8 @@ const OrderDetails = ({
                 +
               </button>
             </div>
-            <p className="font">BDT. 499</p>
-            <p className="total-price font">BDT. {499 * quantity}</p>{" "}
+            <p className="font">BDT. 399</p>
+            <p className="total-price font">BDT. {399 * quantity}</p>{" "}
             {/* Total price */}
           </div>
         </div>

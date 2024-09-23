@@ -13,19 +13,19 @@ const CheckoutPage = () => {
   const [comment, setComment] = useState();
   const [locationSave, setLocationSave] = useState(false);
   const navigate = useNavigate();
-  const [price, setPrice] = useState(499);
+  const [price, setPrice] = useState(399);
   const [quantity, setQuantity] = useState(1);
 
 
   const increaseQuantity = () => {
     setQuantity((prevQuantity) => prevQuantity + 1);
-    setPrice((quantity + 1) * 499);
+    setPrice((quantity + 1) * 399);
   };
 
   const decreaseQuantity = () => {
     if (quantity > 1) {
       setQuantity((prevQuantity) => prevQuantity - 1);
-      setPrice((quantity - 1) * 499);
+      setPrice((quantity - 1) * 399);
     }
   };
 
@@ -69,16 +69,19 @@ const CheckoutPage = () => {
       shippingCharge,
       comment,
     };
+    navigate("/order-confirmation", {
+      state: orderInfo,
+    });
 
-    axios
-      .post("https://pamper-me-backend.vercel.app/api/orders/create", orderInfo)
-      .then(({ data }) => {
-        if (data) {
-          navigate("/order-confirmation", {
-            state: data,
-          });
-        }
-      });
+    // axios
+    //   .post("https://pamper-me-backend.vercel.app/api/orders/create", orderInfo)
+    //   .then(({ data }) => {
+    //     if (data) {
+    //       navigate("/order-confirmation", {
+    //         state: data,
+    //       });
+    //     }
+    //   });
   };
 
   return (
