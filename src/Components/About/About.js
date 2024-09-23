@@ -17,9 +17,9 @@ const About = () => {
                 <model-viewer 
                     src={bottle} 
                     alt="Pamper Me Hair Oil Bottle" 
-                    auto-rotate 
+                    // auto-rotate 
                     camera-controls 
-                    style={{ width: '100%', height: '400px' }} 
+                    style={{ width: '100%', height: '600px' }} 
                     background-color="#FFF"
                 />
             </div>

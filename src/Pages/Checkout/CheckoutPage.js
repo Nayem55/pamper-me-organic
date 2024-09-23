@@ -4,6 +4,8 @@ import "../Checkout/CheckoutPage.css";
 import { useNavigate } from "react-router-dom";
 import BillingDetails from "../../Components/ProductsCheckout/BillingDetails/BillingDetails";
 import OrderDetails from "../../Components/ProductsCheckout/OrderDetails/OrderDetails";
+import "@google/model-viewer";
+import bottle from "../../Images/bottle.glb";
 
 const CheckoutPage = () => {
   // const { cart, setCart, userData } = useContext(Context);
@@ -15,7 +17,6 @@ const CheckoutPage = () => {
   const navigate = useNavigate();
   const [price, setPrice] = useState(399);
   const [quantity, setQuantity] = useState(1);
-
 
   const increaseQuantity = () => {
     setQuantity((prevQuantity) => prevQuantity + 1);
@@ -40,8 +41,8 @@ const CheckoutPage = () => {
 
     const OrderedProduct = {
       _id: "1234",
-      name:"Pamper me essential hair oil",
-      quantity:quantity,
+      name: "Pamper me essential hair oil",
+      quantity: quantity,
       total: price,
     };
 
@@ -127,7 +128,6 @@ const CheckoutPage = () => {
               rows={5}
             ></textarea>
           </div>
-
           <OrderDetails
             city={city}
             price={price}
@@ -139,6 +139,7 @@ const CheckoutPage = () => {
             increaseQuantity={increaseQuantity}
             decreaseQuantity={decreaseQuantity}
           />
+          
 
           <div className="order-confirmation">
             <div>

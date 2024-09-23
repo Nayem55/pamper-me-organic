@@ -21,7 +21,7 @@ const OrderDetails = ({
           <hr />
           <div className="item-row">
             <div className="product-name">
-              {/* <img className="product-img" src={} alt="" /> */}
+              <img className="product-img" src="https://i.ibb.co.com/1sgqpsf/bottle.png" alt="" />
               <p>Pamper Me Essential Hair Oil</p>
             </div>
             <div className="quantity-controls flex items-center gap-2">
