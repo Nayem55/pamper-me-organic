@@ -11,7 +11,7 @@ const About = () => {
                 <p className='mt-4 sm:w-[80%] mb-10'>
                     Pamper Me Organic Hair Oil is a luxurious blend of nature’s finest ingredients, designed to nourish and revitalize your hair from root to tip. Infused with organic oils and botanical extracts, this lightweight formula helps strengthen hair, reduce breakage, and promote healthy growth. Whether you're looking to soothe a dry scalp, add shine, or manage frizz, Pamper Me provides deep hydration without leaving a greasy residue. Ideal for all hair types, this oil is free from harsh chemicals, ensuring a pure and gentle treatment for your hair.
                 </p>
-                <Link className='px-6 py-2 bg-black text-white font-bold rounded'> BUY NOW</Link>
+                <Link to="/checkout" className='px-6 py-2 bg-black text-white font-bold rounded'> BUY NOW</Link>
             </div>
             <div className='w-[100%] sm:w-[50%] mx-auto'>
                 <model-viewer 

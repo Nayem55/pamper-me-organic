@@ -1,0 +1,27 @@
+.billing-details form > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.billing-details form h3 {
+  margin: 30px 0;
+  font-weight: 600;
+}
+
+.locationSave {
+  margin: 15px 0 0;
+}
+
+.locationSave label {
+  font-size: 16px;
+  display: inline;
+  font-weight: 500;
+}
+
+.locationSave p {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
