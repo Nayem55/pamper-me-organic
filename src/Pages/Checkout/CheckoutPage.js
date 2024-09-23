@@ -4,8 +4,6 @@ import "../Checkout/CheckoutPage.css";
 import { useNavigate } from "react-router-dom";
 import BillingDetails from "../../Components/ProductsCheckout/BillingDetails/BillingDetails";
 import OrderDetails from "../../Components/ProductsCheckout/OrderDetails/OrderDetails";
-import "@google/model-viewer";
-import bottle from "../../Images/bottle.glb";
 
 const CheckoutPage = () => {
   // const { cart, setCart, userData } = useContext(Context);

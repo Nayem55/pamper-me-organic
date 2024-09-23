@@ -97,3 +97,27 @@
   font-weight: 500;
   border-radius: 5px;
 }
+
+
+@media (max-width:700px) {
+  .order-confirmed {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+  }
+  .order-confirmed .left {
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+  }
+  .order-confirmed .right {
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .order-confirmed .order-summary > div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
