@@ -68,19 +68,26 @@ const CheckoutPage = () => {
       shippingCharge,
       comment,
     };
-    navigate("/order-confirmation", {
-      state: orderInfo,
-    });
 
-    // axios
-    //   .post("https://pamper-me-backend.vercel.app/api/orders/create", orderInfo)
-    //   .then(({ data }) => {
-    //     if (data) {
-    //       navigate("/order-confirmation", {
-    //         state: data,
-    //       });
-    //     }
-    //   });
+    fetch("https://pamper-me-backend.vercel.app/api/orders/create", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(orderInfo),
+    })
+      .then(response => response.json())  // Convert the response to JSON
+      .then(data => {
+        if (data) {
+          navigate("/order-confirmation", {
+            state: data,
+          });
+        }
+      })
+      .catch(error => {
+        console.error("Error creating order:", error);
+      });
+    
   };
 
   return (
