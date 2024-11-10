@@ -1,5 +1,5 @@
 import React from 'react';
-import banner from "../Images/why-choose-pamper-me-banner.jpg";
+import banner from "../Images/why-pamper-me-banner-v2.jpg";
 
 const ProductFeatures = () => {
   return (
