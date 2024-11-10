@@ -13,7 +13,7 @@ const About = () => {
                 </p>
                 <Link to="/checkout" className='px-6 py-2 bg-black text-white font-bold rounded'> BUY NOW</Link>
             </div>
-            <div className='w-[100%] sm:w-[50%] mx-auto'>
+            {/* <div className='w-[100%] sm:w-[50%] mx-auto'>
                 <model-viewer 
                     src={bottle} 
                     alt="Pamper Me Hair Oil Bottle" 
@@ -22,7 +22,7 @@ const About = () => {
                     style={{ width: '100%', height: '600px' }} 
                     background-color="#FFF"
                 />
-            </div>
+            </div> */}
         </div>
     );
 };
