@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "@google/model-viewer";
-import banner from "../../Images/pamper--me-about-banner-v2.jpg";
+import banner from "../../Images/about-3.jpg";
 
 const About = () => {
   return (
