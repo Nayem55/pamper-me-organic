@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "@google/model-viewer";
-import banner from "../../Images/about-3.jpg";
+import banner from "../../Images/about-banner.jpg";
 
 const About = () => {
   return (
     <div
-      className="relative flex items-center justify-center h-[100vh] sm:h-[80vh] bg-cover bg-center px-4"
+      className="relative flex items-center justify-center h-[100vh] bg-cover bg-center px-4"
       style={{
         backgroundImage: `url(${banner})`, // Replace with your image URL
         backgroundSize: "cover",

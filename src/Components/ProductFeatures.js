@@ -4,7 +4,7 @@ import banner from "../Images/why-pamper-me-banner-v2.jpg";
 const ProductFeatures = () => {
   return (
     <section
-      className="relative py-24 md:py-32 md:text-center px-8 mx-auto md:px-[120px]"
+      className="relative py-24 md:h-[100vh] md:text-center px-8 mx-auto md:px-[120px]"
       style={{
         backgroundImage: `url(${banner})`,
         backgroundSize: 'cover',
