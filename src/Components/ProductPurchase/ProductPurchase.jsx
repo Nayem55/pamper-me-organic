@@ -46,11 +46,7 @@ const ProductPurchase = () => {
           BDT 400
         </motion.p>
         <motion.p variants={rightAnimation} className="mb-5 text-sm sm:text-base text-gray-600 w-[80%]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos iusto
-          dolorum expedita velit rem veniam animi quia corrupti hic suscipit.
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, quae.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur,
-          ex!
+        Pamper yourself with our Pamper Me Lush Locks Hair Potion – the perfect organic solution for your hair care needs. Made from a blend of 20+ natural ingredients, this hair oil promotes healthy, shiny, and nourished hair. Whether you're looking to restore your hair's natural shine or prevent hair damage, this product is tailored to meet all your hair care goals.
         </motion.p>
         <motion.p variants={rightAnimation} className="font-medium mb-2">
           Quantity
