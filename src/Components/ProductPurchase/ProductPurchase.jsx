@@ -25,7 +25,7 @@ const ProductPurchase = () => {
     <div className="productPurchase grid grid-cols-1 md:grid-cols-2 w-[90%] sm:w-[80%] mx-auto items-center justify-items-center mt-20 mb-28">
       {/* Image Section */}
       <div className="mb-8 md:mb-0">
-        <img src={img} alt="Pamper Me Hair Potion" className="w-full h-auto rounded-lg" />
+        <img src="https://i.ibb.co.com/TqBwHhG/post25.jpg" alt="Pamper Me Hair Potion" className="w-[600px] h-auto rounded-lg" />
       </div>
 
       {/* Product Details Section */}

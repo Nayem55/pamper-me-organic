@@ -45,9 +45,12 @@ const Benefits = () => {
     "Enhances Shine & Smoothness",
   ];
 
+
   return (
     <div className="benefits min-h-screen bg-benefits bg-cover bg-no-repeat p-6 flex flex-col sm:items-center sm:justify-center">
-      <p className="text-center text-lg md:text-xl text-gray-600">Product Benefits</p>
+      <p className="text-center text-lg md:text-xl text-gray-600">
+        Product Benefits
+      </p>
       <h3 className="text-center text-2xl md:text-4xl font-semibold my-3 text-[#0C2E01]">
         Protect and Repair
       </h3>

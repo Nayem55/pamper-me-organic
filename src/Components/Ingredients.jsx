@@ -52,7 +52,7 @@ const Ingredients = () => {
         <h2 className="text-4xl font-semibold text-left mb-6 text-[#0C2E01]">
           Ingredients
         </h2>
-        <img className="my-4 sm:hidden" src={img} alt="Pamper Me Ingredients" />
+        <img className="my-4 sm:hidden" src="https://i.ibb.co.com/FmkNRGZ/post24.jpg" alt="Pamper Me Ingredients" />
         <div className="text-left">
           <p className="mb-8 text-lg text-gray-700">
             Pamper Me Organic Hair Oil is crafted with a powerful blend of:
@@ -83,7 +83,7 @@ const Ingredients = () => {
       <div className="sm:w-[50%] flex justify-center">
         <img
           className="hidden sm:block w-full max-w-[90%] rounded-lg"
-          src={img}
+          src="https://i.ibb.co.com/FmkNRGZ/post24.jpg"
           alt="Pamper Me Ingredients Showcase"
         />
       </div>
