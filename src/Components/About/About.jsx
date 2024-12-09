@@ -33,7 +33,7 @@ const About = () => {
           <img
             src="https://nov-one.myshopify.com/cdn/shop/files/img-3-2_768x.png?v=1705138464"
             alt="Hair Oil"
-            className="w-[90%] sm:w-[70%] lg:w-[90%]"
+            className="w-[90%] sm:w-[70%] lg:w-[90%] mt-10 sm:mt-0"
           />
           <div className="about absolute bg-white p-5 rounded shadow-md sm:w-72 right-0 bottom-[-40px] transform md:translate-x-[30%]">
             <h3 className="text-4xl font-bold mb-2 text-[#0C2E01]">92%</h3>

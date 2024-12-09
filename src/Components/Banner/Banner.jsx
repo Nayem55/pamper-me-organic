@@ -27,7 +27,7 @@ const Banner = () => {
           }
           className="w-full md:w-[50%] text-[#0C2E01]"
         >
-          <h1 className="text-[24px] md:text-[38px] leading-snug md:leading-tight font-extrabold mb-4">
+          <h1 className="text-[18px] md:text-[38px] leading-snug md:leading-tight font-extrabold mb-4">
             Unleash the Power of Pure <br /> Ingredients for Lush, Beautiful{" "}
             <br /> Hair with <span className="text-[#98A375]">Pamper Me</span>
           </h1>
@@ -48,7 +48,7 @@ const Banner = () => {
               background-color="#E3EADA"
             />
           </div>
-          <p className="text-[#6F7364] text-lg md:text-3xl font-semibold">
+          <p className="text-[#6F7364] text-md mt-6 sm:mt-0 md:text-3xl font-semibold">
             100% Organic Care for Your Hair, The Way Nature Intended
           </p>
         </motion.div>
