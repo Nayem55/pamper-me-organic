@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
-import "@google/model-viewer"; // Import model-viewer web component
+import "@google/model-viewer"; 
 import bottle from "../../assets/Images/bottle2.glb";
 
 const Benefits = () => {
@@ -78,6 +78,7 @@ const Benefits = () => {
           alt="Pamper Me Hair Oil Bottle"
           auto-rotate
           camera-controls
+          disable-zoom
           style={{
             width: "100%",
             height: isMobile ? "300px" : "500px",

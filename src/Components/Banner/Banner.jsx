@@ -1,11 +1,14 @@
 import React, { Suspense, useRef } from "react";
 import banner from "../../assets/Images/banner1.jpg";
-import bottle from "../../assets/Images/bottle (2).png";
+import bottle from "../../assets/Images/bottle2.glb";
 import { motion, useInView } from "framer-motion";
+import "@google/model-viewer";
 
 const Banner = () => {
   const bannerContainer = useRef();
   const isInView = useInView(bannerContainer, { once: true });
+  const ref = useRef();
+  const isMobile = window.innerWidth <= 768;
 
   return (
     <div
@@ -26,22 +29,47 @@ const Banner = () => {
         >
           <h1 className="text-[24px] md:text-[38px] leading-snug md:leading-tight font-extrabold mb-4">
             Unleash the Power of Pure <br /> Ingredients for Lush, Beautiful{" "}
-            <br /> Hair with{" "}
-            <span className="text-[#98A375]">Pamper Me</span>
+            <br /> Hair with <span className="text-[#98A375]">Pamper Me</span>
           </h1>
+          {/* bottle model mobile*/}
+          <div className="w-full h-[40vh] md:w-[50%] justify-center items-center flex sm:hidden">
+            <model-viewer
+              src={bottle}
+              alt="Pamper Me Hair Oil Bottle"
+              auto-rotate
+              camera-controls
+              disable-zoom
+              // environment-image={banner}
+              style={{
+                width: "100%",
+                height: isMobile ? "300px" : "500px",
+                maxWidth: isMobile ? "350px" : "600px",
+              }}
+              background-color="#E3EADA"
+            />
+          </div>
           <p className="text-[#6F7364] text-lg md:text-3xl font-semibold">
             100% Organic Care for Your Hair, The Way Nature Intended
           </p>
         </motion.div>
 
         {/* Right side bottle model */}
-        {/* <div className="w-full h-[40vh] md:w-[50%] flex justify-center items-center">
-          <div
-            className="w-[80%] h-full rounded-lg md:w-[60%]"
-          >
-            <img src={bottle} className="w-full" alt=""/>
-          </div>
-        </div> */}
+        <div className="w-full h-[40vh] md:w-[50%] justify-center items-center hidden sm:flex">
+          <model-viewer
+            src={bottle}
+            alt="Pamper Me Hair Oil Bottle"
+            auto-rotate
+            camera-controls
+            disable-zoom
+            // environment-image={banner}
+            style={{
+              width: "100%",
+              height: isMobile ? "300px" : "500px",
+              maxWidth: isMobile ? "350px" : "600px",
+            }}
+            background-color="#E3EADA"
+          />
+        </div>
       </div>
     </div>
   );
