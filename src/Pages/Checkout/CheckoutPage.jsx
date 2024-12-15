@@ -38,7 +38,6 @@ const CheckoutPage = () => {
       Object.fromEntries(form);
 
     const OrderedProduct = {
-      _id: "1234",
       name: "Pamper me essential hair oil",
       quantity: quantity,
       total: price,
@@ -69,7 +68,7 @@ const CheckoutPage = () => {
       comment,
     };
 
-    fetch("https://pamper-me-backend.vercel.app/api/orders/create", {
+    fetch("http://localhost:5000/api/orders/create", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

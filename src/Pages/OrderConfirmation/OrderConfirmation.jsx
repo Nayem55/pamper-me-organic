@@ -15,11 +15,13 @@ const OrderConfirmation = () => {
     PaymentMethod,
     shippingCharge,
     vat,
-  } = useLocation()?.state;
+  } = useLocation().state;
 
   useEffect(() => {
     window.history.pushState(null, "", "/");
   }, []);
+
+  console.log(OrderedProduct);
 
   return (
     <div className="order-confirmed">
@@ -44,13 +46,16 @@ const OrderConfirmation = () => {
           <h3>{PaymentMethod}</h3>
           <div>
             <div className="ordered-products">
-                <div>
-                  <p>{OrderedProduct?.quantity}x</p>
-                  <p>{OrderedProduct?.name.length > 15 ? OrderedProduct?.name.slice(0, 15) + "..." : OrderedProduct?.name}</p>
-                  <p>
-                    BDT <span className="font">{subtotal}</span>
-                  </p>
-                </div>
+              <div>
+                <p>
+                  {OrderedProduct[0]?.name}
+                </p>
+
+                <p>{OrderedProduct[0]?.quantity}x</p>
+                <p>
+                  BDT <span className="font">{subtotal}</span>
+                </p>
+              </div>
             </div>
             <div className="billing">
               <div>
