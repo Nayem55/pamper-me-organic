@@ -68,7 +68,7 @@ const CheckoutPage = () => {
       comment,
     };
 
-    fetch("http://localhost:5000/api/orders/create", {
+    fetch("https://pamper-me-backend.vercel.app/api/orders/create", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
