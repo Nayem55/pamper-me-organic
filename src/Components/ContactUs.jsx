@@ -40,7 +40,7 @@ const ContactUs = () => {
             <input
               type="text"
               id="name"
-              className="w-full px-4 py-3 border-2 border-gray-300 rounded-md focus:outline-none focus:border-[#DF1B4D] transition-all duration-300"
+              className="w-full px-4 py-3 border-[1px] border-gray-300 rounded-md focus:outline-none focus:border-[#DF1B4D] transition-all duration-300"
               placeholder="Your Name"
             />
           </motion.div>
@@ -55,7 +55,7 @@ const ContactUs = () => {
             <input
               type="email"
               id="email"
-              className="w-full px-4 py-3 border-2 border-gray-300 rounded-md focus:outline-none focus:border-[#DF1B4D] transition-all duration-300"
+              className="w-full px-4 py-3 border-[1px] border-gray-300 rounded-md focus:outline-none focus:border-[#DF1B4D] transition-all duration-300"
               placeholder="Your Email"
             />
           </motion.div>
@@ -69,7 +69,7 @@ const ContactUs = () => {
             </label>
             <textarea
               id="message"
-              className="w-full px-4 py-3 border-2 border-gray-300 rounded-md focus:outline-none focus:border-[#DF1B4D] transition-all duration-300"
+              className="w-full px-4 py-3 border-[1px] border-gray-300 rounded-md focus:outline-none focus:border-[#DF1B4D] transition-all duration-300"
               rows="5"
               placeholder="Your Message"
             ></textarea>

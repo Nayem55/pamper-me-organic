@@ -24,7 +24,7 @@ const ProductPurchase = () => {
   return (
     <div className="productPurchase grid grid-cols-1 md:grid-cols-2 w-[90%] sm:w-[80%] mx-auto items-center justify-items-center mt-20 mb-28">
       {/* Image Section */}
-      <div className="mb-8 md:mb-0">
+      <div className="mb-8 md:mb-0 md:mr-10 2xl:mr-0">
         <img src="https://i.ibb.co.com/TqBwHhG/post25.jpg" alt="Pamper Me Hair Potion" className="w-[600px] h-auto rounded-lg" />
       </div>
 

@@ -76,8 +76,8 @@ const Benefits = () => {
         <model-viewer
           src={bottle}
           alt="Pamper Me Hair Oil Bottle"
-          auto-rotate
-          camera-controls
+          // auto-rotate
+          // camera-controls
           disable-zoom
           style={{
             width: "100%",

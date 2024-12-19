@@ -12,7 +12,7 @@ const Banner = () => {
 
   return (
     <div
-      className="flex justify-center items-center h-screen bg-cover bg-center px-4"
+      className="flex justify-center items-center h-screen bg-cover bg-center sm:px-[150px] 2xl:px-4 "
       style={{
         backgroundImage: `url(${banner})`,
       }}

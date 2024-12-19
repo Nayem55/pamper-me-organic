@@ -15,17 +15,27 @@ const Ingredients = () => {
     },
     {
       icon: arganOil,
-      title: "Argan Oil",
+      title: "Amla Oil",
       desc: "Adds shine and smoothness to your hair.",
     },
     {
       icon: almondOil,
-      title: "Almond Oil",
+      title: "Olive Oil",
       desc: "Strengthens hair follicles for healthier growth.",
     },
     {
       icon: jojobaOil,
-      title: "Jojoba Oil",
+      title: "Kari Pata",
+      desc: "Maintains a healthy and balanced scalp.",
+    },
+    {
+      icon: jojobaOil,
+      title: "Onion Extract",
+      desc: "Maintains a healthy and balanced scalp.",
+    },
+    {
+      icon: jojobaOil,
+      title: "Kari Pata",
       desc: "Maintains a healthy and balanced scalp.",
     },
   ];
