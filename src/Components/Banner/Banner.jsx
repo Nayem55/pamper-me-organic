@@ -4,6 +4,7 @@ import bottle from "../../assets/Images/bottle2.glb";
 import { motion, useInView } from "framer-motion";
 import "@google/model-viewer";
 
+
 const Banner = () => {
   const bannerContainer = useRef();
   const isInView = useInView(bannerContainer, { once: true });

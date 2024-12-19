@@ -15,6 +15,8 @@ import { useNavigate } from "react-router-dom";
 import ProductPurchase from "../../Components/ProductPurchase/ProductPurchase";
 import HairTips from "../../Components/HairTips/HairTips";
 
+
+
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);
   const navigate = useNavigate();
