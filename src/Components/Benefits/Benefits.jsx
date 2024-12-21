@@ -1,7 +1,8 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
-import "@google/model-viewer"; 
+import "@google/model-viewer";
 import bottle from "../../assets/Images/bottle2.glb";
+
 
 const Benefits = () => {
   const ref = useRef();
@@ -45,7 +46,6 @@ const Benefits = () => {
     "Enhances Shine & Smoothness",
   ];
 
-
   return (
     <div className="benefits min-h-screen bg-benefits bg-cover bg-no-repeat p-6 flex flex-col sm:items-center sm:justify-center">
       <p className="text-center text-lg md:text-xl text-gray-600">
@@ -53,6 +53,12 @@ const Benefits = () => {
       </p>
       <h3 className="text-center text-2xl md:text-4xl font-semibold my-3 text-[#0C2E01]">
         Protect and Repair
+        <lord-icon
+          src="https://cdn.lordicon.com/aolthhrx.json"
+          trigger="hover"
+          colors="primary:#121331,secondary:#808963"
+          style={{ width: "250px", height: "250px" }}
+        ></lord-icon>
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-[30%_40%_30%] place-items-center gap-6 md:gap-0 w-full max-w-5xl mt-8">
         {/* Left Column */}

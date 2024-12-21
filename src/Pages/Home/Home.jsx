@@ -14,6 +14,9 @@ import Benefits from "../../Components/Benefits/Benefits";
 import { useNavigate } from "react-router-dom";
 import ProductPurchase from "../../Components/ProductPurchase/ProductPurchase";
 import HairTips from "../../Components/HairTips/HairTips";
+import lottie from "lottie-web"
+import { defineElement } from "@lordicon/element";
+defineElement(lottie.loadAnimation)
 
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);
