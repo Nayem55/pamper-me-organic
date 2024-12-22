@@ -17,13 +17,13 @@ const HairTips = () => {
           initial={{ y: -60, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
           viewport={{ once: true }}
-          className="flex flex-col items-center text-center gap-5 bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
+          className="flex flex-col items-center text-center gap-5 p-8 rounded-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
         >
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVCnFaohWAABD6rd9i7sNm13ZudJTqZgGbYg&s"
             alt="Hair Tip"
             width={140}
-            className="rounded-full mb-4"
+            className="rounded-full mb-4 w-[120px] h-[120px]"
           />
           <p className="text-2xl font-semibold text-[#98A375]">Hydrate Your Hair</p>
           <p className="text-sm text-gray-600">
@@ -35,13 +35,13 @@ const HairTips = () => {
           initial={{ y: -60, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
           viewport={{ once: true }}
-          className="flex flex-col items-center text-center gap-5 bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
+          className="flex flex-col items-center text-center gap-5 p-8 rounded-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
         >
           <img
             src="https://www.redzhairstylists.co.uk/wp-content/uploads/2023/07/hair-straightening-900x600-1.jpg"
             alt="Hair Tip"
             width={140}
-            className="rounded-full mb-4"
+            className="rounded-full mb-4 w-[120px] h-[120px]"
           />
           <p className="text-2xl font-semibold text-[#98A375]">Protect Your Hair from Heat</p>
           <p className="text-sm text-gray-600">
@@ -53,13 +53,13 @@ const HairTips = () => {
           initial={{ y: -60, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
           viewport={{ once: true }}
-          className="flex flex-col items-center text-center gap-5 bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
+          className="flex flex-col items-center text-center gap-5 p-8 rounded-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
         >
           <img
             src="https://mississaugahairsalon.ca/wp-content/uploads/2022/07/why-is-it-imporant-to-trim-your-hair.jpg"
             alt="Hair Tip"
             width={140}
-            className="rounded-full mb-4"
+            className="rounded-full mb-4 w-[120px] h-[120px]"
           />
           <p className="text-2xl font-semibold text-[#98A375]">Trim Regularly</p>
           <p className="text-sm text-gray-600">

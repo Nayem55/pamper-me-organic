@@ -18,6 +18,8 @@ import lottie from "lottie-web"
 import { defineElement } from "@lordicon/element";
 defineElement(lottie.loadAnimation)
 
+
+
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);
   const navigate = useNavigate();
