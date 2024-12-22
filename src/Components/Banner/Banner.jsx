@@ -1,19 +1,23 @@
 import React, { Suspense, useRef } from "react";
 import banner from "../../assets/Images/banner1.jpg";
-import bottle from "../../assets/Images/bottle2.glb";
+import bottleModel from "../../assets/Images/bottle2.glb";
 import { motion, useInView } from "framer-motion";
-import "@google/model-viewer";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, useGLTF } from "@react-three/drei";
 
+const BottleModel = ({ position, scale }) => {
+  const { scene } = useGLTF(bottleModel);
+  return <primitive object={scene} position={position} scale={scale} />;
+};
 
 const Banner = () => {
   const bannerContainer = useRef();
   const isInView = useInView(bannerContainer, { once: true });
-  const ref = useRef();
   const isMobile = window.innerWidth <= 768;
 
   return (
     <div
-      className="flex justify-center items-center h-screen bg-cover bg-center sm:px-[150px] 2xl:px-4 "
+      className="flex justify-center items-center h-screen bg-cover bg-center sm:px-[150px] 2xl:px-4"
       style={{
         backgroundImage: `url(${banner})`,
       }}
@@ -32,22 +36,31 @@ const Banner = () => {
             Unleash the Power of Pure <br /> Ingredients for Lush, Beautiful{" "}
             <br /> Hair with <span className="text-[#98A375]">Pamper Me</span>
           </h1>
-          {/* bottle model mobile*/}
-          <div className="w-full h-[40vh] md:w-[50%] justify-center items-center flex sm:hidden">
-            <model-viewer
-              src={bottle}
-              alt="Pamper Me Hair Oil Bottle"
-              auto-rotate
-              camera-controls
-              disable-zoom
-              // environment-image={banner}
+          {/* Bottle model for mobile */}
+          <div className="w-full h-[300px] md:w-[50%] justify-center items-center flex sm:hidden">
+            <Canvas
               style={{
                 width: "100%",
-                height: isMobile ? "300px" : "500px",
+                height: "100%",
                 maxWidth: isMobile ? "350px" : "600px",
               }}
-              background-color="#E3EADA"
-            />
+              camera={{ position: [0, 2, 5], fov: 25 }} // Adjust camera height
+            >
+              <ambientLight intensity={2} />
+              <directionalLight position={[5, 5, 5]} />
+              <Suspense fallback={null}>
+                <BottleModel
+                  position={[0, -1, 0]} // Adjust model's Y-axis position
+                  scale={isMobile ? 0.8 : 0.8} // Adjust scale for mobile
+                />
+              </Suspense>
+              <OrbitControls
+                enableZoom={false}
+                enablePan={false}
+                maxPolarAngle={Math.PI / 2} // Restrict Y-axis movement
+                minPolarAngle={Math.PI / 2} // Restrict Y-axis movement
+              />
+            </Canvas>
           </div>
           <p className="text-[#6F7364] text-md mt-6 sm:mt-0 md:text-3xl font-semibold">
             100% Organic Care for Your Hair, The Way Nature Intended
@@ -55,21 +68,30 @@ const Banner = () => {
         </motion.div>
 
         {/* Right side bottle model */}
-        <div className="w-full h-[40vh] md:w-[50%] justify-center items-center hidden sm:flex">
-          <model-viewer
-            src={bottle}
-            alt="Pamper Me Hair Oil Bottle"
-            auto-rotate
-            camera-controls
-            disable-zoom
-            // environment-image={banner}
+        <div className="w-full h-[300px] md:w-[50%] justify-center items-center hidden sm:flex">
+          <Canvas
             style={{
               width: "100%",
-              height: isMobile ? "300px" : "500px",
-              maxWidth: isMobile ? "350px" : "600px",
+              height: "150%",
+              maxWidth: "600px",
             }}
-            background-color="#E3EADA"
-          />
+            camera={{ position: [0, 2, 5], fov: 60 }} // Adjust camera height
+          >
+            <ambientLight intensity={2.0} />
+            <directionalLight position={[5, 5, 5]} />
+            <Suspense fallback={null}>
+              <BottleModel
+                position={[0, -2, 0]} // Adjust model's Y-axis position
+                scale={2} // Full-size model for desktop
+              />
+            </Suspense>
+            <OrbitControls
+              enableZoom={false}
+              enablePan={false}
+              maxPolarAngle={Math.PI / 2} // Restrict Y-axis movement
+              minPolarAngle={Math.PI / 2} // Restrict Y-axis movement
+            />
+          </Canvas>
         </div>
       </div>
     </div>

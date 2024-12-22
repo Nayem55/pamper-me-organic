@@ -6,6 +6,7 @@ import { defineElement } from "lord-icon-element";
 import lottie from "lottie-web";
 defineElement(lottie);
 
+
 const Benefits = () => {
   const ref = useRef();
   const isMobile = window.innerWidth <= 768;
