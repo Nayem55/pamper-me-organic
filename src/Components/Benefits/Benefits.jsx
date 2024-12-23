@@ -1,7 +1,8 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import "@google/model-viewer";
-import bottle from "../../assets/Images/bottle2.glb";
+// import bottle from "../../assets/Images/bottle2.glb";
+import bottle from "../../assets/Images/bottle-static.png";
 import { defineElement } from "lord-icon-element";
 import lottie from "lottie-web";
 defineElement(lottie);
@@ -97,7 +98,7 @@ const Benefits = () => {
         </motion.div>
 
         {/* Center 3D Model */}
-        <model-viewer
+        {/* <model-viewer
           src={bottle}
           alt="Pamper Me Hair Oil Bottle"
           // auto-rotate
@@ -109,6 +110,10 @@ const Benefits = () => {
             maxWidth: isMobile ? "350px" : "600px",
           }}
           background-color="#FFF"
+        /> */}
+        <img
+          src={bottle}
+          alt=""
         />
 
         {/* Right Column */}

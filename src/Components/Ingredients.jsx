@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../assets/Images/ingredients.jpg";
+import img from "../assets/Images/front-view-mint-cinnamon-with-spices-white-ingredients-plant-color.png";
 import almondOil from "../assets/icons/almond-oil.png";
 import arganOil from "../assets/icons/argan-oil.png";
 import coconutOil from "../assets/icons/coconut-oil.png";
@@ -72,7 +72,7 @@ const Ingredients = () => {
             Ingredients
           </h2>
           <img
-            className="my-4 sm:hidden"
+            className="my-4 sm:hidden w-[100%]"
             src={img}
             alt="Pamper Me Ingredients"
           />
