@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import "@google/model-viewer";
-import banner from "../../assets/Images/about-banner.jpg";
+import banner from "../../assets/Images/about.jpg";
 import { motion, useInView } from "framer-motion";
 
 const About = () => {

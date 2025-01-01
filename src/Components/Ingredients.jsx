@@ -5,7 +5,7 @@ import arganOil from "../assets/icons/argan-oil.png";
 import coconutOil from "../assets/icons/coconut-oil.png";
 import jojobaOil from "../assets/icons/olive-oil.png";
 import { motion } from "framer-motion";
-import banner from "../assets/Images/ingredients-banner.jpg";
+import banner from "../assets/Images/ingredientv2.jpg";
 
 const Ingredients = () => {
   const ingredients = [
