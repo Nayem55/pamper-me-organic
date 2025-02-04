@@ -4,6 +4,7 @@ import "../Checkout/CheckoutPage.css";
 import { useNavigate } from "react-router-dom";
 import BillingDetails from "../../Components/ProductsCheckout/BillingDetails/BillingDetails";
 import OrderDetails from "../../Components/ProductsCheckout/OrderDetails/OrderDetails";
+import ReactPixel from "react-facebook-pixel";
 
 const CheckoutPage = () => {
   // const { cart, setCart, userData } = useContext(Context);
@@ -68,6 +69,20 @@ const CheckoutPage = () => {
       comment,
     };
 
+    // React Pixel event tracking with corrected structure
+    ReactPixel.track("Purchase", {
+      contents: [
+        {
+          name: OrderedProduct.name,
+          quantity: OrderedProduct.quantity,
+          price: OrderedProduct.total,
+        },
+      ],
+      content_type: "product",
+      value: orderInfo.totalPrice,
+      currency: "TAKA",
+    });
+
     fetch("https://pamper-me-backend.vercel.app/api/orders/create", {
       method: "POST",
       headers: {
@@ -75,18 +90,17 @@ const CheckoutPage = () => {
       },
       body: JSON.stringify(orderInfo),
     })
-      .then(response => response.json())  // Convert the response to JSON
-      .then(data => {
+      .then((response) => response.json()) // Convert the response to JSON
+      .then((data) => {
         if (data) {
           navigate("/order-confirmation", {
             state: data,
           });
         }
       })
-      .catch(error => {
+      .catch((error) => {
         console.error("Error creating order:", error);
       });
-    
   };
 
   return (
@@ -143,7 +157,6 @@ const CheckoutPage = () => {
             increaseQuantity={increaseQuantity}
             decreaseQuantity={decreaseQuantity}
           />
-          
 
           <div className="order-confirmation">
             <div>
